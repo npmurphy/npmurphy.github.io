@@ -20,12 +20,28 @@
     })();
 
 $(document).ready(function () {
-    
-    $('#summary').hide();
-    $('#showSummary').click(function () {
-      $('#summary').slideToggle("slow");
+    // $("[id^=jander]") select wildcard
+    //$('#jander') select exact
+    $('[id^=summary]').hide(); // hide all summaries 
+    $('#show_summary_PConjecture').click(function () {
+      $('[id^=summary_PConjecture]').slideToggle("slow"); // show all of the P Conjecture summary
     });
-});
+    //$('#show_summary_PConjecture_Symmetric').click(function () {
+    //  $('#summary_PConjecture_Symmetric').slideToggle("slow"); // show all of the P Conjecture summary
+    //});
+    $('.cite').each(function() {
+      var this_paper_id = $(this).attr('id');
+      if (this_paper_id){ // skip elements without id
+        console.log(this_paper_id);
+        var target_div_id = this_paper_id.replace('show_','');
+        //console.log(target_div_id);
+        $(this).append($('<span class=expander>').text("Expand Me")).bind("click",function(e) {
+          alert(target_div_id);
+          $("#"+target_div_id).slideToggle("slow"); 
+        });
+      }
+    });
+  });
 </script>
 <title>Niall Murphy</title>
 </head>
@@ -35,8 +51,8 @@ $(document).ready(function () {
         <a id="top"></a>
     </div>
 
-    <div id="container">
-        <div id="main">
+  <div id="container">
+    <div id="main">
 
             <div id="logo">
                 <img scale=25 src="portrait-smallest-cut.jpg" alt="Me in the Valle de Ordesa in the Pyrenees."/>
@@ -153,23 +169,10 @@ $(document).ready(function () {
 
             <p class="block"><strong>Computational complexity and membrane systems.</strong></p>
             <p class="tech">
-                Turlough Neary, Damien Woods, Niall Murphy, Rainer Glaschick
-                <em>"Wang's B machines are efficiently universal, as is Hasenjaeger's small universal electromechanical toy"</em>
-                <a href = "http://arxiv.org/abs/1304.0053">arXiv:1304.0053 [cs.CC]</a>
-            March 2013
-            </p>
-            <p class="tech">
             Niall Murphy and Damien Woods
             <em>"AND and/or OR: Uniform polynomial-size circuits"</em>,
             <a href="http://arxiv.org/abs/1212.3282">arXiv:1212.3282 [cs.CC]</a>
             Dec 2012 <!--<a href="">pdf</a>-->
-            </p>
-            <p class="conf">
-                Rainer Glaschick, Turlough Neary, Damien Woods, and Niall Murphy
-                <em>"Hasenjaeger's electromechanical small universal Turing machine is time efficient"</em>
-                <a href="http://www.computing-conference.ugent.be/tic2">
-                    Turing in context II</a>,
-                 10-12th October 2012, Brussels, Belgium.
             </p>
             <p class="tech">
                 Antonio E. Porreca, Niall Murphy, and M.J. Pérez-Jiméz
@@ -203,81 +206,97 @@ $(document).ready(function () {
             N. Murphy and D. Woods <em>A characterisation of NL using membrane systems without charges and dissolution</em>, NUIM Tech Report NUIM-CS-TR-2008-01, Jan 2008, Department of Computer Science, National University of Ireland Maynooth, Ireland.
 			<a href="papers/MW2008m.pdf">pdf</a>
             </p>-->
-          <!--</div>-->
-            <p class="block"><strong>The P-Conjecture and the computational power of cellular division.</strong></p>
-            <!--<h2 >The P-Conjecture and the computational power of cellular division</h2>-->
-            <div id="showSummary">Explanation</div>
-            <div id="summary">
-            <p>
-            Cell division seems to allow cellular computers to create an
-            exponential number of self-replicating parallel computers which
-            would allow us to solve <a
-              href="https://en.wikipedia.org/wiki/P_%3D_NP_problem">NP complete
-              problems</a> in a feasible amount of time, thus revolutionising the
-            world of computation.
-            However, brute force approaches, where every possible solution is 
-            generated and tested are clearly a non-starer. 
-            Current algorithms can solve problems of size 125 without much 
-            effort. However, a brute force cellular computer implemented using <em>e. coli</em>
-            working on the same problem would require a mass of bacteria equal to the moon, 
-            of which perhaps only 1 bacterium has the correct answer! 
-            </p>
-            <p>
-            So perhaps with a cleverer strategy (similar to those in software) cellular computers can solve 
-            NP complete problems in polynomial time?
-            In 2007 it was conjectured that without some way of a cell 
-            to signal to the outside world, that it was impossible to 
-              solve the hardest problems in NP. 
-            </p>
-            <p>
-            The conjecture is still open, but we have made significant 
-            progress to proving it. 
-            </p>
-            <p>
-            In [WodissNL] we showed that if the cells cannot dissolve 
-            then exponential division cannot help and the system probably cannot
-            help you. 
-            </p>
-            <p>
-            In [Symmetric] we showed that when the cells divide, if both 
-            are the same, that is symmetric, to borrow a term from stem cells. 
-            Then it is possible to simulate the system with an algorithm 
-            that stores the number of copies of each unique type of membrane
-            there are in the system.
-            </p>
-            <p>
-            We then looked at the two key points, dissolving membranes and 
-            cell division, again we showed that despite the exponential blow
-            up, the system can be simulated in polynomial time. 
-            </p>
-            <p>
-            These two systems can be simulated in polynomial time so, 
-            unless P = NP, or P = NC these systems will not be useful as 
-            parallel computers. 
-            </p>
-          </div>
-              [Symmetric]
-              <p class="rev-conf">
-                N. Murphy &amp; D. Woods.
-                <em>"Active Membrane Systems Without Charges and Using Only Symmetric Elementary Division Characterise P"</em>
-                Proceedings of the Workshop on Membrane Computing 2007,
-                <a href="http://dx.doi.org/10.1007/978-3-540-77312-2_23">Springer LNCS vol. 4860, 367-384</a>.
-                &nbsp;<a href="papers/MW2007p.pdf">pdf</a>
-              </p>
-              [Dissonly]
-              <p class="rev-conf">
-                D. Woods, N. Murphy, M.J. Pérez-Jiménez, A. Riscos-Núñez.
-                <em>"Membrane dissolution and division in P"</em>,
-                Proceedings of the 8th International Conference on Unconventional Computing 2009,
-                <a href="http://dx.doi.org/10.1007/978-3-642-03745-0_28">Springer LNCS vol. 5715</a>. 
-                &nbsp; <a href="papers/WMPR2009.pdf">pdf</a>
-              </p>
-          </div>
+            <!--</div>-->
+      <p class="block"><strong>Hasenjaeger's universal machine.</strong></p>
+        <p class="conf">
+          R. Glaschick, T. Neary, D. Woods, and N. Murphy
+          <em>"Hasenjaeger's electromechanical small universal Turing machine is time efficient"</em>
+          <a href="http://www.computing-conference.ugent.be/tic2">Turing in context II</a>,
+          10-12th October 2012, Brussels, Belgium. 
+          Contactforum Series of the Royal Flemish Academy of Sciences and Arts.
+        </p>
+        <p class="tech">
+          Turlough Neary, Damien Woods, Niall Murphy, Rainer Glaschick
+          <em>"Wang's B machines are efficiently universal, as is Hasenjaeger's small universal electromechanical toy"</em>
+          <a href = "http://arxiv.org/abs/1304.0053">arXiv:1304.0053 [cs.CC]</a>
+          March 2013
+        </p>
+
+
+        <p class="block"><strong>The P-Conjecture and the computational power of cellular division.</strong></p>
+        <!--<h2 >The P-Conjecture and the computational power of cellular division</h2>-->
+        <div id="show_summary_PConjecture">Explanation</div>
+        <div id="summary_PConjecture">
+          <p>
+          Cell division seems to allow cellular computers to create an
+          exponential number of self-replicating parallel computers which
+          would allow us to solve <a
+            href="https://en.wikipedia.org/wiki/P_%3D_NP_problem">NP complete
+            problems</a> in a feasible amount of time, thus revolutionising the
+          world of computation.
+          However, brute force approaches, where every possible solution is 
+          generated and tested are clearly a non-starer. 
+          Current algorithms can solve problems of size 125 without much 
+          effort. However, a brute force cellular computer implemented using <em>e. coli</em>
+          working on the same problem would require a mass of bacteria equal to the moon, 
+          of which perhaps only 1 bacterium has the correct answer! 
+          </p>
+          <p>
+          So perhaps with a cleverer strategy (similar to those in software) cellular computers can solve 
+          NP complete problems in polynomial time?
+          In 2007 it was conjectured that without some way of a cell 
+          to signal to the outside world, that it was impossible to 
+            solve the hardest problems in NP. 
+          </p>
+          <p>
+          The conjecture is still open, but we have made significant 
+          progress to proving it. 
+          </p>
+          <p>
+          In [WodissNL] we showed that if the cells cannot dissolve 
+          then exponential division cannot help and the system probably cannot
+          help you. 
+          </p>
+          <p>
+          These two systems can be simulated in polynomial time so, 
+          unless P = NP, or P = NC these systems will not be useful as 
+          parallel computers. 
+          </p>
+      </div>
+      <h3 class="cite" id="show_summary_PConjecture_Symmetric">[Symmetric]</h3>
+      <div class="main_paper">
+        <b>N. Murphy</b> &amp; D. Woods.
+        <em>"Active Membrane Systems Without Charges and Using Only Symmetric Elementary Division Characterise P"</em>
+        Proceedings of the Workshop on Membrane Computing 2007,
+        <a href="http://dx.doi.org/10.1007/978-3-540-77312-2_23">Springer LNCS vol. 4860, 367-384</a>.
+        &nbsp;<a href="papers/MW2007p.pdf">pdf</a>
+      </div>
+      <div id="summary_PConjecture_Symmetric">
+        <p>
+        In [Symmetric] we showed that when the cells divide, if both 
+        are the same, that is symmetric, to borrow a term from stem cells. 
+        Then it is possible to simulate the system with an algorithm 
+        that stores the number of copies of each unique type of membrane
+        there are in the system.
+        </p>
+      </div>
+      <h3 class="cite" id="show_summary_PConjecture_Dissonly">[Dissonly]</h3>
+      <div class="main_paper">
+        D. Woods, <b>N. Murphy</b>, M.J. Pérez-Jiménez, A. Riscos-Núñez.
+        <em>"Membrane dissolution and division in P"</em>,
+        Proceedings of the 8th International Conference on Unconventional Computing 2009,
+        <a href="http://dx.doi.org/10.1007/978-3-642-03745-0_28">Springer LNCS vol. 5715</a>. 
+        &nbsp; <a href="papers/WMPR2009.pdf">pdf</a>
+      </div>
+      <div id="summary_PConjecture_Dissonly">
+        <p>
+        We then looked at the two key points, dissolving membranes and 
+        cell division, again we showed that despite the exponential blow
+        up, the system can be simulated in polynomial time. 
+        </p>
+      </div>
+    </div> <!-- end of main container -->
           <div id="sidebar">
-            <!--<h2 class="sidelink menuheader"><a id="sitemenu"></a>Site menu:</h2>-->
-            <!--<a class="sidelink" href="index.html">Home page</a>
-            <span class="hide"> | </span>-->
-            <!--<a class="sidelink" href="academic.html">Academic page</a>-->
             <span class="hide"> | </span>
             <!--<a class="sidelink" href="blog">Blog</a>
             <span class="hide"> | </span>-->
@@ -288,8 +307,6 @@ $(document).ready(function () {
             <a class="sidelink" href="index.html">And a last one</a>
             <span class="hide"> | </span>
             <a class="hide" href="#top" accesskey="1">Top of page</a>-->
-
-
             <h3>Email Address</h3>
             <p><script type="text/javascript">
                  upmemail = "se.mpu@yhprum.llain"

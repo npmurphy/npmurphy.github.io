@@ -187,16 +187,36 @@ text-align:center;
 }
 
 .block{
-padding:20px;
-background:#eee;
-color:#222;
-border:2px solid #ddd;
+  padding:20px;
+  background:#eee;
+  color:#222;
+  border:2px solid #ddd;
 }
 
-/*
-.journal{
-/*background:#6fe77b; /*#99FFCC;
+.main_paper{
+  border-style:solid;
+  border-top: none;
+  border-color:#ddd;
+  /*border:2px; */
+  /*background:#6fe77b; /*#99FFCC;*/
 }
+
+h3.cite {
+  border-style:solid  !important;
+  border-color:#ddd  !important;
+  border-bottom: none  !important;
+  /*background-color: silver;*/
+  padding: 1px;
+  font-size=1.1em
+  margin: 0px 0px 0px 0px !important;
+  -moz-border-radius-topleft: 20px;
+  -moz-border-radius-topright: 20px;
+  border-radius: 20px 20px 0 0;
+ }
+.superceeded_paper{
+  background:#6fefff; /*#99FFCC;*/
+}
+/*
 .rev-conf{
 border:2px;
 border-style:solid;
