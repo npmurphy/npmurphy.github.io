@@ -24,7 +24,12 @@ $(document).ready(function () {
     //$('#jander') select exact
     $('[id^=summary]').hide(); // hide all summaries 
     $('#show_summary_PConjecture').click(function () {
-      $('[id^=summary_PConjecture]').slideToggle("slow"); // show all of the P Conjecture summary
+      if ($('#summary_PConjecture').is(":hidden")){
+        $('[id^=summary_PConjecture]').filter(":hidden").slideToggle("slow"); // show all of the P Conjecture summary
+      }
+      else { //now hide all the visible ones
+        $('[id^=summary_PConjecture]').filter(":visible").slideToggle("slow"); // show all of the P Conjecture summary
+      }
     });
     //$('#show_summary_PConjecture_Symmetric').click(function () {
     //  $('#summary_PConjecture_Symmetric').slideToggle("slow"); // show all of the P Conjecture summary
