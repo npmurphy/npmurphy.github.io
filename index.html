@@ -24,8 +24,8 @@ $(document).ready(function () {
     //$('#jander') select exact
     $('[id^=summary]').hide(); // hide all summaries 
     $('#show_summary_PConjecture').click(function () {
-      if ($('#summary_PConjecture').is(":hidden")){
-        $('[id^=summary_PConjecture]').filter(":hidden").slideToggle("slow"); // show all of the P Conjecture summary
+      if ($('#summary_PConjecture').is(":hidden")){ // show all hidden summaries
+        $('[id^=summary_PConjecture]').filter(":hidden").slideToggle("slow"); 
       }
       else { //now hide all the visible ones
         $('[id^=summary_PConjecture]').filter(":visible").slideToggle("slow"); // show all of the P Conjecture summary
@@ -40,10 +40,14 @@ $(document).ready(function () {
         console.log(this_paper_id);
         var target_div_id = this_paper_id.replace('show_','');
         //console.log(target_div_id);
-        $(this).append($('<span class=expander>').text("Expand Me")).bind("click",function(e) {
-          alert(target_div_id);
-          $("#"+target_div_id).slideToggle("slow"); 
-        });
+        $(this).append(
+            $('<span class=expander>')
+            .text("read more ▶"))
+            .bind("click",function(e) {
+              alert(target_div_id);
+              $("#"+target_div_id).slideToggle("slow");
+              $(this).find(".expander").text("hide blurb ▼");
+            });
       }
     });
   });
@@ -233,14 +237,15 @@ $(document).ready(function () {
         <div id="show_summary_PConjecture">Explanation</div>
         <div id="summary_PConjecture">
           <p>
-          Cell division seems to allow cellular computers to create an
-          exponential number of self-replicating parallel computers which
+          Cell division seems to allow computers implemented in living cells to create an
+          exponential number of self-replicating parallel computing devices which
           would allow us to solve <a
             href="https://en.wikipedia.org/wiki/P_%3D_NP_problem">NP complete
-            problems</a> in a feasible amount of time, thus revolutionising the
+            problems</a> in a feasible amount of time, and so revolutionise the
           world of computation.
-          However, brute force approaches, where every possible solution is 
-          generated and tested are clearly a non-starer. 
+          However, if these cellular computers use a brute force approach, 
+          that is, they try every possible solution to a problem 
+            they will generated and tested are clearly a non-starer. 
           Current algorithms can solve problems of size 125 without much 
           effort. However, a brute force cellular computer implemented using <em>e. coli</em>
           working on the same problem would require a mass of bacteria equal to the moon, 
