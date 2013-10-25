@@ -34,7 +34,7 @@ $(document).ready(function () {
     //$('#show_summary_PConjecture_Symmetric').click(function () {
     //  $('#summary_PConjecture_Symmetric').slideToggle("slow"); // show all of the P Conjecture summary
     //});
-    $('.cite').each(function() {
+    $('.main_paper').each(function() {
       var this_paper_id = $(this).attr('id');
       if (this_paper_id){ // skip elements without id
         console.log(this_paper_id);
@@ -273,8 +273,8 @@ $(document).ready(function () {
           parallel computers. 
           </p>
       </div>
-      <h3 class="cite" id="show_summary_PConjecture_Symmetric">[Symmetric]</h3>
-      <div class="main_paper">
+      <h3 class="cite" >[Symmetric]</h3>
+      <div class="main_paper" id="show_summary_PConjecture_Symmetric">
         <b>N. Murphy</b> &amp; D. Woods.
         <em>"Active Membrane Systems Without Charges and Using Only Symmetric Elementary Division Characterise P"</em>
         Proceedings of the Workshop on Membrane Computing 2007,
@@ -290,8 +290,8 @@ $(document).ready(function () {
         there are in the system.
         </p>
       </div>
-      <h3 class="cite" id="show_summary_PConjecture_Dissonly">[Dissonly]</h3>
-      <div class="main_paper">
+      <h3 class="cite" >[Dissonly]</h3>
+      <div class="main_paper" id="show_summary_PConjecture_Dissonly">
         D. Woods, <b>N. Murphy</b>, M.J. Pérez-Jiménez, A. Riscos-Núñez.
         <em>"Membrane dissolution and division in P"</em>,
         Proceedings of the 8th International Conference on Unconventional Computing 2009,

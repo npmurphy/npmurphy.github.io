@@ -201,6 +201,10 @@ text-align:center;
   /*background:#6fe77b; /*#99FFCC;*/
 }
 
+.expander {
+  float : right;
+}
+
 h3.cite {
   border-style:solid  !important;
   border-color:#ddd  !important;
