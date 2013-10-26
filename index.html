@@ -19,38 +19,46 @@
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
     })();
 
+var txt_more = "read more ▶";
+var txt_less = "hide blurb ▼";
+
 $(document).ready(function () {
-    // $("[id^=jander]") select wildcard
-    //$('#jander') select exact
-    $('[id^=summary]').hide(); // hide all summaries 
-    $('#show_summary_PConjecture').click(function () {
-      if ($('#summary_PConjecture').is(":hidden")){ // show all hidden summaries
-        $('[id^=summary_PConjecture]').filter(":hidden").slideToggle("slow"); 
-      }
-      else { //now hide all the visible ones
-        $('[id^=summary_PConjecture]').filter(":visible").slideToggle("slow"); // show all of the P Conjecture summary
-      }
+  // $("[id^=jander]") select wildcard
+  //$('#jander') select exact
+  $('[id^=summary]').hide(); // hide all summaries 
+
+  // add the show text switches
+  $('[id^=show_summary]')
+    .append($('<span class=expander>')
+      .text(txt_more))
+        .click(show_hide_logic);
+});
+
+
+function show_hide_logic ( ) {
+  var this_button_id = $(this).attr('id');
+  var this_text_id = this_button_id.replace('show_','');
+  //alert("cik" + this_section_id);
+  if ($("#" + this_text_id).is(":hidden")) { // show all hidden summaries
+    $('[id^=' + this_text_id + ']').filter(":hidden").each(function (){
+      sub_text_id = $(this).attr('id');
+      $('#show_' + sub_text_id ).find(".expander").text(txt_less);
+      $(this).slideToggle("slow");
     });
-    //$('#show_summary_PConjecture_Symmetric').click(function () {
-    //  $('#summary_PConjecture_Symmetric').slideToggle("slow"); // show all of the P Conjecture summary
-    //});
-    $('.main_paper').each(function() {
-      var this_paper_id = $(this).attr('id');
-      if (this_paper_id){ // skip elements without id
-        console.log(this_paper_id);
-        var target_div_id = this_paper_id.replace('show_','');
-        //console.log(target_div_id);
-        $(this).append(
-            $('<span class=expander>')
-            .text("read more ▶"))
-            .bind("click",function(e) {
-              alert(target_div_id);
-              $("#"+target_div_id).slideToggle("slow");
-              $(this).find(".expander").text("hide blurb ▼");
-            });
-      }
+  }
+  else { //now hide all the visible ones
+    $('[id^=' + this_text_id + ']').filter(":visible").each(function (){
+      sub_text_id = $(this).attr('id');
+      $('#show_' + sub_text_id ).find(".expander").text(txt_more);
+      $(this).slideToggle("slow");
     });
-  });
+  }
+}
+
+
+function jqst(obj){
+  return $('<div>').append(obj.clone()).html(); 
+}
 </script>
 <title>Niall Murphy</title>
 </head>
@@ -232,9 +240,11 @@ $(document).ready(function () {
         </p>
 
 
-        <p class="block"><strong>The P-Conjecture and the computational power of cellular division.</strong></p>
+        <p class="block" id="show_summary_PConjecture">
+          <strong>The P-Conjecture and the computational power of cellular division.</strong>
+        </p>
         <!--<h2 >The P-Conjecture and the computational power of cellular division</h2>-->
-        <div id="show_summary_PConjecture">Explanation</div>
+        <!--<div >Explanation</div>-->
         <div id="summary_PConjecture">
           <p>
           Cell division seems to allow computers implemented in living cells to create an
