@@ -194,9 +194,11 @@ text-align:center;
 }
 
 .main_paper{
-  border-style:solid;
+  padding:10px;
+  /*border-style:solid;
   border-top: none;
   border-color:#ddd;
+   * */
   /*border:2px; */
   /*background:#6fe77b; /*#99FFCC;*/
 }

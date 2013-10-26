@@ -243,47 +243,47 @@ function jqst(obj){
         <p class="block" id="show_summary_PConjecture">
           <strong>The P-Conjecture and the computational power of cellular division.</strong>
         </p>
-        <!--<h2 >The P-Conjecture and the computational power of cellular division</h2>-->
-        <!--<div >Explanation</div>-->
         <div id="summary_PConjecture">
           <p>
-          Cell division seems to allow computers implemented in living cells to create an
-          exponential number of self-replicating parallel computing devices which
-          would allow us to solve <a
-            href="https://en.wikipedia.org/wiki/P_%3D_NP_problem">NP complete
-            problems</a> in a feasible amount of time, and so revolutionise the
-          world of computation.
-          However, if these cellular computers use a brute force approach, 
-          that is, they try every possible solution to a problem 
-            they will generated and tested are clearly a non-starer. 
-          Current algorithms can solve problems of size 125 without much 
-          effort. However, a brute force cellular computer implemented using <em>e. coli</em>
-          working on the same problem would require a mass of bacteria equal to the moon, 
-          of which perhaps only 1 bacterium has the correct answer! 
+          <a http="http://ppage.psystems.eu/">Membrane systems, or P-systems</a>
+          are a model of computation attempts to abstract the workings of 
+          cells. Using this model we can characterise 
+          the sets of problems that membrane systems can solve with limited 
+          resources.
+          The hope is that as efforts to implement cellular computers progress 
+          that the theoretical results from membrane systems will be a guide to
+          synthetic biologists as to how different cellular mechanisms 
+          affect the computing power of the resulting cell. 
           </p>
           <p>
-          So perhaps with a cleverer strategy (similar to those in software) cellular computers can solve 
-          NP complete problems in polynomial time?
-          In 2007 it was conjectured that without some way of a cell 
-          to signal to the outside world, that it was impossible to 
-            solve the hardest problems in NP. 
+          Cell division seems to allow computers implemented in living cells 
+          to create an exponential number of self-replicating parallel computing devices. 
+          While in the real world, this level of perfect parallelism is impossible, 
+          some level of parallelism is often desirable.  
           </p>
           <p>
-          The conjecture is still open, but we have made significant 
-          progress to proving it. 
+          The <em>P-Conjecture</em>, stated in 2007 asks what features of 
+          membrane computing are essential to take advantage of the exponential 
+          growth of membrane systems. In particular it asks: if cells have 
+          no way to indicate an internal change of state to the outside world, 
+          can the overall system be parallel? 
           </p>
           <p>
-          In [WodissNL] we showed that if the cells cannot dissolve 
-          then exponential division cannot help and the system probably cannot
-          help you. 
+          For a system to be parallel we show that it can solve problems in 
+          <a http="http://en.wikipedia.org/wiki/PSPACE">PSPACE</a>
+          in polynomial time, or problems in 
+          <a http="https://en.wikipedia.org/wiki/NC_(complexity)">NC</a>
+          in poly-logarithmic time. 
+          To show a system is sequential, that is, that it probably (assuming that NC ≠ P ≠ PSPACE) 
+          can never be parallelised, we show that it exactly characterises 
+          the complexity class <a http="https://en.wikipedia.org/wiki/P_(complexity)">P</a>. 
           </p>
           <p>
-          These two systems can be simulated in polynomial time so, 
-          unless P = NP, or P = NC these systems will not be useful as 
-          parallel computers. 
+          The original statement of the P-Conjecture remains unsolved, but 
+          my co-authors and I have made significant progress. 
           </p>
       </div>
-      <h3 class="cite" >[Symmetric]</h3>
+      <!--<h3 class="cite" >[Symmetric]</h3>-->
       <div class="main_paper" id="show_summary_PConjecture_Symmetric">
         <b>N. Murphy</b> &amp; D. Woods.
         <em>"Active Membrane Systems Without Charges and Using Only Symmetric Elementary Division Characterise P"</em>
@@ -293,26 +293,32 @@ function jqst(obj){
       </div>
       <div id="summary_PConjecture_Symmetric">
         <p>
-        In [Symmetric] we showed that when the cells divide, if both 
-        are the same, that is symmetric, to borrow a term from stem cells. 
-        Then it is possible to simulate the system with an algorithm 
-        that stores the number of copies of each unique type of membrane
-        there are in the system.
+        This paper is the closest result to finally resolving the P-Conjecture. 
+        We showed that if when the cells divide, both daughter cells
+        are identical, that is the division was symmetric, then the system 
+        probably cannot solve problems in a parallel way. 
+        The main trick is that we can simulate such a system, in a standard 
+        computer using polynomial time and memory, by storing just a single 
+        copy of each archetype membrane, and then manipulating counters as 
+        the system develops over time. 
         </p>
       </div>
-      <h3 class="cite" >[Dissonly]</h3>
+      <!--<h3 class="cite" >[Dissonly]</h3>-->
       <div class="main_paper" id="show_summary_PConjecture_Dissonly">
         D. Woods, <b>N. Murphy</b>, M.J. Pérez-Jiménez, A. Riscos-Núñez.
         <em>"Membrane dissolution and division in P"</em>,
         Proceedings of the 8th International Conference on Unconventional Computing 2009,
-        <a href="http://dx.doi.org/10.1007/978-3-642-03745-0_28">Springer LNCS vol. 5715</a>. 
+        <a href="http://dx.doi.org/10.1007/978-3-642-03745-0_28">Springer LNCS vol. 5715 pp 262-276</a>. 
         &nbsp; <a href="papers/WMPR2009.pdf">pdf</a>
       </div>
       <div id="summary_PConjecture_Dissonly">
         <p>
-        We then looked at the two key points, dissolving membranes and 
-        cell division, again we showed that despite the exponential blow
-        up, the system can be simulated in polynomial time. 
+        In this paper we took to membrane system rules that seem to make 
+        resolving the P-conjecture difficult to resolve, i.e.  
+        dissolving membranes and cell division, and showed that 
+        despite the exponential blow up in the number of membranes, that we 
+        can ignore them and follow the movement of individual objects in the 
+        system in polynomial time on a standard computer. 
         </p>
       </div>
     </div> <!-- end of main container -->
