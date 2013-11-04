@@ -24,8 +24,8 @@ var txt_more = "read more ▶";
 var txt_less = "hide blurb ▼";
 
 $(document).ready(function () {
-  // $("[id^=jander]") select wildcard
-  //$('#jander') select exact
+  // $("[id^=jander]") select starting with
+  //$('#jander') select exactly 
   $('[id^=summary]').hide(); // hide all summaries 
 
   // add the show text switches
@@ -39,7 +39,6 @@ $(document).ready(function () {
 function show_hide_logic ( ) {
   var this_button_id = $(this).attr('id');
   var this_text_id = this_button_id.replace('show_','');
-  //alert("cik" + this_section_id);
   if ($("#" + this_text_id).is(":hidden")) { // show all hidden summaries
     $('[id^=' + this_text_id + ']').filter(":hidden").each(function (){
       sub_text_id = $(this).attr('id');
@@ -102,27 +101,31 @@ function jqst(obj){
                and the <a href="http://www.lia.upm.es/">LIA group</a>
               in <a href="http://www.fi.upm.es/">Faculty of Informatics in the Universidad Politécnica de Madrid</a>.
                <!--We are participating in the <a href="http://www.bactocom.eu">Bactocom</a> FP7 project. -->
+              <!--<a href="http://grupos.unican.es/intergenomica/">collaborators at the University of Santander</a>.-->
             </p>   
             <p>
             My research interest is the intersection of biology and computation. 
-            I am currently interested in exploring how to control spatial 
-            patterns by chemical reactions. 
-            
-            <!--<a href="http://grupos.unican.es/intergenomica/">collaborators at the University of Santander</a>.-->
-            I aim to study the computing potential of these systems using
-            computational complexity theory by developing new models of
-            computation and algorithms to better understand and control
-            biological systems. 
-            
-            My broader interest looking at the physical world through the
-            lens of theoretical computer science.
+            Current projects and interests include, in no particular order:
+            <ul>
+              <li>Studying the spread of plasmids in bacterial colonies by conjugation.</li>
+              <li>Understanding co-evolution between bacteria and bacteriophages.</li>
+              <li>Controlling spatial pattern formation in bacterial colonies.</li>
+              <li>Chemical reactions/gene networks as information processing systems.</li>
+            </ul>
+            My approach is to express these systems using existing models from 
+            computer science and the analyse the computing potential of these systems 
+            or use existing results from computer science to form new biological hypotheses. 
             </p>
+
             <p>Here is my first plasmid.
                 </br>
                 <img  src="plasmidrs.jpg"> 
             </p>
             <p>
-              My PhD thesis was on identifying what classes of problems can be tackled by an abstract mathematical model of cellular division. My special focus was on problems that could be solved using a feasible amount of time and very little memory (molecules). 
+              My PhD thesis was on identifying what classes of problems can be
+              tackled by an abstract mathematical model of cellular division.
+              My special focus was on problems that could be solved using a
+              feasible amount of time and very little memory (molecules). 
                <em>"Uniformity conditions for membrane systems: Uncovering complexity below P"</em>
                (<a href="papers/thesis.pdf">pdf</a>), 
                 and is from the <a href="http://www.cs.nuim.ie">Computer Science Department</a>
@@ -219,29 +222,57 @@ function jqst(obj){
 			<a href="papers/MW2008m.pdf">pdf</a>
             </p>-->
             <!--</div>-->
-      <p class="block"><strong>Hasenjaeger's universal machine.</strong></p>
-        <p class="conf">
-          R. Glaschick, T. Neary, D. Woods, and N. Murphy
+      <p class="block" id="show_summary_Hasenjaeger"><strong>Hasenjaeger's universal machine.</strong></p>
+        <div class="blurb" id="summary_Hasenjaeger">
+          <p>
+          In the early 1960's Gilbert Hasenjaeger built several mechanical devices 
+          to demonstrate the concept of a Turing machine 
+          to his students at the Universities of Münster and Bonn. 
+          Using old telephone relays and rotary switches forced him to build a machine 
+          that uses remarkably few rules and to simulate a simple
+          non-erasing model, namely Wang's B machines.
+          </p>
+          <img src="GHutm-total.jpg" width=100%>
+          <p>
+          Over the past 60 years B machines have been used to
+          show that a number of other models are universal. Unfortunately, via
+          previous proofs, these models suffered from an exponential slowdown
+          when simulating Turing machines. We show that Wang's B
+          machines actually simulate Turing machines in polynomial time.
+          </p>
+          <p>
+          Since Hasenjaeger's machine simulates Wang B machines, 
+          it too is an efficient model of computation. 
+          </p>
+          <p>
+          Hasenjaeger's machine is currently on display in the Heinz Nixdorf MuseumsForum, Germany, and 
+          a video of the machine in action can be seen 
+          <a href="http://www.math.uni-hamburg.de/home/loewe/CL2012/">here</a>
+          or <a href="http://www.math.uni-hamburg.de/home/loewe/CL2012/hasenjaegermaschine.mp4">here</a>.
+          </p>
+        </div>
+        <div class="main_paper" >
+          Turlough Neary, Damien Woods, <b>Niall Murphy</b>, Rainer Glaschick
+          <em>"Wang's B machines are efficiently universal, as is Hasenjaeger's small universal electromechanical toy"</em>
+          <a href = "http://arxiv.org/abs/1304.0053">arXiv:1304.0053 [cs.CC]</a>
+          March 2013
+        </div>
+        <div class="superceeded_paper" >
+        <!--<div class="main_paper" >-->
+          R. Glaschick, T. Neary, D. Woods, and <b>N. Murphy</b>
           <em>"Hasenjaeger's electromechanical small universal Turing machine is time efficient"</em>
           <a href="http://www.computing-conference.ugent.be/tic2">Turing in context II</a>,
           10-12th October 2012, Brussels, Belgium. 
           Contactforum Series of the Royal Flemish Academy of Sciences and Arts.
-        </p>
-        <p class="tech">
-          Turlough Neary, Damien Woods, Niall Murphy, Rainer Glaschick
-          <em>"Wang's B machines are efficiently universal, as is Hasenjaeger's small universal electromechanical toy"</em>
-          <a href = "http://arxiv.org/abs/1304.0053">arXiv:1304.0053 [cs.CC]</a>
-          March 2013
-        </p>
-
+        </div>
 
         <p class="block" id="show_summary_PConjecture">
           <strong>The P-Conjecture and the computational power of cellular division.</strong>
         </p>
-        <div id="summary_PConjecture">
+        <div class="blurb" id="summary_PConjecture">
           <p>
           <a http="http://ppage.psystems.eu/">Membrane systems, or P-systems</a>
-          are a model of computation attempts to abstract the workings of 
+          are a model of computation that abstracts the inner workings of 
           cells. Using this model we can characterise 
           the sets of problems that membrane systems can solve with limited 
           resources.
@@ -269,7 +300,7 @@ function jqst(obj){
           in polynomial time, or problems in 
           <a http="https://en.wikipedia.org/wiki/NC_(complexity)">NC</a>
           in poly-logarithmic time. 
-          To show a system is sequential, that is, that it probably (assuming that NC ≠ P ≠ PSPACE) 
+          To show a system is sequential, that is, that it probably (assuming that NC ≠ P, or P ≠ PSPACE) 
           can never be parallelised, we show that it exactly characterises 
           the complexity class <a http="https://en.wikipedia.org/wiki/P_(complexity)">P</a>. 
           </p>
@@ -286,16 +317,16 @@ function jqst(obj){
         <a href="http://dx.doi.org/10.1007/978-3-540-77312-2_23">Springer LNCS vol. 4860, 367-384</a>.
         &nbsp;<a href="papers/MW2007p.pdf">pdf</a>
       </div>
-      <div id="summary_PConjecture_Symmetric">
+      <div class="blurb" id="summary_PConjecture_Symmetric">
         <p>
         This paper is the closest result to finally resolving the P-Conjecture. 
-        We showed that if when the cells divide, both daughter cells
-        are identical, that is the division was symmetric, then the system 
-        probably cannot solve problems in a parallel way. 
-        The main trick is that we can simulate such a system, in a standard 
-        computer using polynomial time and memory, by storing just a single 
-        copy of each archetype membrane, and then manipulating counters as 
-        the system develops over time. 
+        We showed that if both daughter cells resulting from a division
+        are identical, that is the division was symmetric, that the system 
+        probably cannot solve problems in a parallel way.
+        By storing just a single copy of each archetype membrane 
+        and then manipulating counters as the system develops over time 
+        we can simulate such a system in a standard 
+        computer using polynomial time and memory. 
         </p>
       </div>
       <!--<h3 class="cite" >[Dissonly]</h3>-->
@@ -306,14 +337,14 @@ function jqst(obj){
         <a href="http://dx.doi.org/10.1007/978-3-642-03745-0_28">Springer LNCS vol. 5715 pp 262-276</a>. 
         &nbsp; <a href="papers/WMPR2009.pdf">pdf</a>
       </div>
-      <div id="summary_PConjecture_Dissonly">
+      <div class="blurb" id="summary_PConjecture_Dissonly">
         <p>
-        In this paper we took to membrane system rules that seem to make 
-        resolving the P-conjecture difficult to resolve, i.e.  
-        dissolving membranes and cell division, and showed that 
-        despite the exponential blow up in the number of membranes, that we 
-        can ignore them and follow the movement of individual objects in the 
-        system in polynomial time on a standard computer. 
+        In this paper we consider a system that uses only two rules, 
+        cell division and cell dissolution. These rules were key 
+        to providing parallelism in other P-conjecture attempts. 
+        We showed that with just this combination that the exponential number of membranes 
+        can be compressed into a polynomially sized tree and that by 
+        following the movement of objects around this tree needs only polynomial time. 
         </p>
       </div>
       <div class="main_paper" id="show_summary_PConjecture_divlevel">
@@ -322,11 +353,11 @@ function jqst(obj){
           In Proceedings of the 8th Brainstorming Week on Membrane Computing, 2010.
           &nbsp;<a href="papers/PM2010bwmc.pdf">pdf</a>
       </div>
-      <div id="summary_PConjecture_divlevel">
+      <div class="blurb" id="summary_PConjecture_divlevel">
         <p>
-        In this technical report we try to find a link between the degrees of 
+        In this technical report we find a possible link between the degree of 
         power of division in a system, and the resulting degree of parallelism.
-        We hoped that by trying to characterise the Polynomial Hierarchy we 
+        We hope that by trying to characterise the Polynomial Hierarchy we 
         would gain insight into the P-Conjecture. 
         </p>
       </div>
@@ -361,11 +392,19 @@ function jqst(obj){
             <a href="http://www.campusmoncloa.es"><img src="moncloa.gif"/></a>
             </p>
             <h3>News</h3>
+                <h4>November 2013</h4>
+                <p>
+                  Deadline for the 
+                  <a href="http://www.cs.ox.ac.uk/conferences/CBIBM/">
+                    Workshop on Cell Based and Individual Based Modelling - CBIBM
+                  </a> is January the 6th 2014.
+                </p>
+
                 <h4>October 2013</h4>
                 <p>
                   Starting a new role with the Bio-Computation Group in Microsoft Research Cambridge, UK.
                 </p>
-                <h4>July 2013</h4>
+                <h4>July/September 2013</h4>
                 <p>Paper "AND and/or OR: Uniform polynomial-size circuits" 
                 <a href="http://arxiv.org/abs/1212.3282">arXiv:1212.3282 [cs.CC]</a> 
                     is accepted for <a href="http://mcu2013.ini.uzh.ch">MCU 2013, ETH Zurich</a>, September 2013.
