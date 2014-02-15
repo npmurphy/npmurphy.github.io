@@ -388,20 +388,25 @@ function jqst(obj){
           </p>
           <p>
           Could it be possible to use a special purpose hardware component that 
-          we could plug into normal PCs to sort in constant time?
-          We look at several processes, 
+          we could plug into a standard computer to sort in constant time?
+          We look at several processes: 
             gel electrophoresis,
             chromatography,
             optical tweezers,
             refraction of light, and
             mass spectrometry. 
-          From these we abstract a model of physical sorting. 
-          This model captures the idea that time resolution dependant does not depend on the number of elements being sorted. 
-          While this gives us constant time sorting, unfortunately connecting to a Turing machine, or Boolean circuit 
-          or some other classic model of computing ruins everything. 
-          There is a bottle neck where the standard computer must input the list to be sorted and read out the sorted list. 
-          These delays make our physical sorting machine comparable with 
-          standard sorting algorithms. 
+          From these we abstract a model of computation that captures 
+            a general method of physical sorting. 
+          While this model allows us to sort a list in constant time,
+            there is a major bottle neck. 
+          For such a device to be useful it must connect with a standard computer,
+            such as a 
+              Turing machine or
+              Boolean circuit. 
+          Unfortunately, 
+                inputting the list to sort or reading off the output
+                makes our super fast sorting device behave just as poorly as 
+                a standard sequential algorithm. 
           </p>
         </div>
           <p class="main-paper">
