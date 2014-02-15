@@ -168,7 +168,6 @@ function jqst(obj){
               The work in this paper was greatly expanded and its latest incarnation appears as 
                 "AND and/or OR: Uniform polynomial-size circuits"</em>,
             <a href="http://arxiv.org/abs/1212.3282">arXiv:1212.3282 [cs.CC]</a>.
->
 			</p>
 
             <!--<p class="tech">
@@ -221,30 +220,40 @@ function jqst(obj){
             <!--</div>-->
       <p class="block" id="show_summary_Sorting"><strong>Models of Physical Sorting.</strong></p>
         <div class="blurb" id="summary_Sorting">
+          <p>
           There are theoretical limits on how fast we can sort a list of numbers. 
           However, in their daily activities, physical scientists routinely sort 
           millions of molecules. 
-          In fact the number of molecules they sort does not affect the time!
-          It only affects the resolution. 
+          In fact the number of molecules being sorted does not affect the time 
+          needed. The time only controls the resolution of the sorting. 
 
-          <!--
-          <figure>
-            <subfigure>
-              <caption>
-              </caption>
-            </subfigure>
-            <subfigure>
-              <caption>
-              </caption>
-            </subfigure>
-          </figure>
-          -->
+          <p>
+          For example, microbiologists sort millions of DNA molecules by length. 
+          <img src="gel-sort--wo-normal-ladder--aligned_26-4-06.png" width=100%>
+          </p>
 
-          In this paper we consider the possibility of building special purpose constant time sorting hardware.
-          We come the conclusion that while such devices could sort, 
-          the time spent by a standard machine to feed in data and read out data 
-          will nullify any speed up gains we hoped to achieve. 
-          
+          <p>
+          And using a prism we can sort light beams by wavelength.
+          <img src="prism.png" width=100%>
+          </p>
+          <p>
+          Could it be possible to use a special purpose hardware component that 
+          we could plug into normal PCs to sort in constant time?
+          In consider how this would pan out from a theoretical point of view.
+          We look at several processes, 
+            gel electrophoresis,
+            chromatography,
+            optical tweezers,
+            refraction of light, and
+            mass spectrometry. 
+          From these we abstract a model of physical sorting. 
+          This model captures the idea that time resolution dependant does not depend on the number of elements being sorted. 
+          While this gives us constant time sorting, unfortunately connecting to a Turing machine, or Boolean circuit 
+          or some other classic model of computing ruins everything. 
+          There is a bottle neck where the standard computer must input the list to be sorted and read out the sorted list. 
+          These delays make our physical sorting machine comparable with 
+          standard sorting algorithms. 
+          </p>
         </div>
           <p class="main-paper">
             N. Murphy, T.J. Naughton, D. Woods, B. Henley, K. McDermott, E. Duffy, P. J. M. van der Burgt, and N. Woods,
