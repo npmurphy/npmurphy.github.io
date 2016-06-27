@@ -91,24 +91,23 @@ function jqst(obj){
             <div id="intro">
               <h2><a id="maincontent"></a>Summary</h2>
               <p>
-              I am a contract scientist at the 
+              I am a postdoc with <a href="http://www.slcu.cam.ac.uk/directory/locke-james">James Locke</a>
+              at the <a href="http://http://www.slcu.cam.ac.uk">The Sainsbury Laboratory</a> at the <a href="https://www.cam.ac.uk/">University of Cambridge</a>.
+              I am also a contract scientist at the 
                 <a href="https://research.microsoft.com/en-us/groups/biology/">Bio-Computation group at Microsoft Research Cambridge, UK</a>
-                working on implementing a stochastic back-end for  
-              <a href="https://github.com/HaseloffLab/CellModeller4">CellModeller</a>.
+                working on synthesising chemical reaction networks to compute particular functions.
               <br/>
               Previously, I was a postdoctoral fellow working with  
                <a href="http://www.lia.upm.es/index.php?page=alfonso-rodriguez-paton-aradas">Alfonso Rodríguez-Patón</a>
                and the <a href="http://www.lia.upm.es/">LIA group</a>
               in <a href="http://www.fi.upm.es/">Faculty of Informatics in the Universidad Politécnica de Madrid</a>.
-               <!--We are participating in the <a href="http://www.bactocom.eu">Bactocom</a> FP7 project. -->
-              <!--<a href="http://grupos.unican.es/intergenomica/">collaborators at the University of Santander</a>.-->
             </p>   
             <p>
             My research interest is the intersection of biology and computation. 
             Current projects and interests include, in no particular order:
             <ul>
-              <li>Studying the spread of plasmids in bacterial colonies by conjugation.</li>
-              <li>Understanding co-evolution between bacteria and bacteriophages.</li>
+              <!--<li>Studying the spread of plasmids in bacterial colonies by conjugation.</li>
+                <li>Understanding co-evolution between bacteria and bacteriophages.</li>-->
               <li>Controlling spatial pattern formation in bacterial colonies.</li>
               <li>Chemical reactions/gene networks as information processing systems.</li>
             </ul>
@@ -117,10 +116,10 @@ function jqst(obj){
             or use existing results from computer science to form new biological hypotheses. 
             </p>
 
-            <p>Here is my first plasmid.
+            <!--<p>Here is my first plasmid.
                 </br>
                 <img  src="plasmidrs.jpg"> 
-            </p>
+                </p>-->
             <p>
               My PhD thesis was on identifying what classes of problems can be
               tackled by an abstract mathematical model of cellular division.
@@ -148,12 +147,20 @@ function jqst(obj){
             <!-- 
             <p>My <a href="http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/m/Murphy:Niall.html">DBLP</a> page.
             The publications are arranged by topic
+            <p class="rev-conf">N. Murphy &amp; A. odríguez-Patón
+                <em>"Distributed Computing With Prokaryotic Immune Systems"</em>
 , the following colours indicate the status of the publication.
             <span class="journal">Journal Papers</span>, <span class="rev-conf">Reviewed Conference papers</span>, <span class="unrev-conf">Unreviewed conference papers</span>, <span class="tech">Unreviewed Technical Reports and preprints</span>.-->
             <!--<p class="tech">
             N. Murphy &amp; D. Woods. <em>"The Computational Complexity of Uniformity and Semi-uniformity in Membrane Systems"</em>, Technical Report in 7th Brainstorming Week on Membrane Computing, Volume 2, 73-84
             <a href="papers/MW2009cb.pdf">pdf</a> <a href=papers/me-refs.bib>bibtex</a>
             </p>-->
+			<p class="block"><strong>Synthesising Chemical Reaction Networks</strong></p>
+            <p class="rev-conf">N. Dalchau, N. Murphy, R. Petersen, B. Yordanov
+            <em>"Synthesizing and tuning chemical reaction networks with specified behaviours"</em>
+              21st Conference on DNA Computing and Molecular Programming Machines. 2015
+              <a href="https://arxiv.org/abs/1508.04403">arXiv:1508.04403 [cs.ET]</a>
+
 			<p class="block"><strong>Natural Computing</strong></p>
             <p class="rev-conf">N. Murphy &amp; A. Rodríguez-Patón
                 <em>"Distributed Computing With Prokaryotic Immune Systems"</em>
@@ -215,27 +222,8 @@ function jqst(obj){
         desirable than semi-uniformity the two concepts were computationally identical.
         We show that for a simple class of circuits, uniform families are strictly weaker than 
         semi-uniform ones. 
-
       This result is applicable to any implementation of family style computing 
-      systems (e.g.\@ Boolean circuits, membrane systems, DNA strand displacement etc.). 
-      I have improved, expanded, and refined this work since the
-      original (best student paper award, DNA 16) conference paper~\cite{MW2010dna}. 
-      While preparing this work for a journal publication we greatly extended and 
-      improved on the original result~\cite{uniformityarxiv2012} this work
-      was presented at the ``Machines Computation and Universality''
-      conference 2013 at ETH Zurich.
-          Before my award winning research, the complexity community intuitively felt that:
-          while devices that accept many inputs (uniform) are more 
-          desirable than a ``one-shot'' hard coded device (semi-uniform),
-          the two concepts were computationally identical.
-          My research proved that for a simple example, this is not the
-          case~\cite{MW2014}!
-          This result resolved an open question in membrane computing and 
-          won the \emph{best student paper prize} at the DNA 16 conference~\cite{MW2010dna}. 
-          We improved, strengthened and refined the work to the point that  
-          we could make a contribution to mainstream complexity theory~\cite{MurphyWoods2013}.
-          The result is applicable to many biological methods of computing 
-          such as chemical reaction networks and DNA strand displacement.
+      systems (e.g. Boolean circuits, membrane systems, DNA strand displacement etc.). 
           </p>
         </div>
         <div class="main_paper" id="show_summary_uniform_memdiffuni">
@@ -246,11 +234,10 @@ function jqst(obj){
           </a>, 134(1-2):129-152. 2014.
           Also see <a href="http://arxiv.org/abs/1412.3377">arXiv:1412.3377 [cs.CC]</a>. 
         </div>
-        <div class="blurb" id="summary_uniform_memdiffuni">
+        <!--<div class="blurb" id="summary_uniform_memdiffuni">
           <p>
-          here we apply the result to membrane systems.
           </p>
-        </div>
+          </div>-->
         <div class="superceeded_paper" id="show_summary_uniform_dnapaper">
           <p class="rev-conf">N. Murphy &amp; D. Woods. <em>"Uniformity conditions in natural computing"</em>, preproceedings of DNA16 2010.
           <!--<a href="papers/DNA16.pdf">pdf</a>--> &nbsp; 
@@ -263,7 +250,7 @@ function jqst(obj){
         </div>
         <div class="blurb" id="summary_uniform_dnapaper">
           <p>
-          here we apply the result to membrane systems.
+          <!--here we apply the result to membrane systems.-->
           </p>
         </div>
         <div class="main_paper" id="show_summary_uniform_tight">
@@ -277,7 +264,9 @@ function jqst(obj){
         </div>
         <div class="blurb" id="summary_uniform_tight">
           <p>
-          Here we explore the effects of tight Here we give the proof that semi-uniform membrane systems here we apply the result to membrane systems.
+          We introduce tight (more appropriate) uniformity conditions to 
+          membrane computing and find that some models are actually exponentially 
+          weaker than previously thought.
           </p>
         </div>
         <div class="superceeded_paper" id="show_summary_semiuniform_L_NL">
@@ -291,8 +280,10 @@ function jqst(obj){
         </div>
         <div class="blurb" id="summary_semiuniform_L_NL">
           <p>
-          Here we investigate how different interpretations of the definitions of membrane systems 
-          can result in a change in the computing power of the system.
+          Some definitions is the world of membrane systems are vague and open to 
+          interpretation. 
+          In this paper we consider some interpretations of the halting and acceptance conditions. 
+          It is surprising that this can result in a change in the computing power of the system.
           This idea was revisited more throughly in "<em>Uniformity is weaker than semi-uniformity for some membrane systems</em>" above. 
           </p>
         </div>
@@ -306,9 +297,9 @@ function jqst(obj){
         </div>
         <div class="blurb" id="summary_semiuniform_NL">
           <p>
-          This paper is the first time tight uniformity conditions were applied to
-          membrane computing and highlighted that for active membrane systems without dissolution, 
-          the previous upper bound could be improved exponentially.  
+          We introduce tight (more appropriate) uniformity conditions to 
+          membrane computing and find that some models are actually exponentially 
+          weaker than previously thought. 
           This idea was revisited more throughly in "<em>The computational power of membrane systems under tight uniformity conditions</em>" above. 
           </p>
         </div>
@@ -537,7 +528,8 @@ function jqst(obj){
             <a class="hide" href="#top" accesskey="1">Top of page</a>-->
             <h3>Email Address</h3>
             <p><script type="text/javascript">
-                 upmemail = "se.mpu@yhprum.llain"
+                 //upmemail = "se.mpu@yhprum.llain"
+                 ucemail = "ku.ca.mac.ucls@yhpruM.llaiN"
                  msemail = "moc.tfosorcim@prumin-a"
                  //nuimemail = "ei.miun.sc@yhprumn" 
                  document.write('<a href="mailto:',upmemail.split("").reverse().join(""),'">', upmemail.split("").reverse().join(""), '</a><br/>');
@@ -545,15 +537,27 @@ function jqst(obj){
             </script></p>
             <h3>Funding</h3>
             <p>
-               Current Research visit is funded by
-                <a href="http://www.cobra-project.eu/exchange_visits.html">the COBRA Project</a>.
+               Currently funded by Microsoft Research and the Gatsby foundation. 
             </p>
+            <!--Postdoctoral fellowship funded by the PICATA program of 
             <p>
-            Postdoctoral fellowship funded by the PICATA program of 
+                <a href="http://www.cobra-project.eu/exchange_visits.html">the COBRA Project</a>.
             <a href="http://www.campusmoncloa.es">CEI Moncloa</a>.
             <a href="http://www.campusmoncloa.es"><img src="moncloa.gif"/></a>
-            </p>
+            </p>-->
             <h3>News</h3>
+                <h4>July 2015</h4>
+                <p>
+                  Joining the Locke Group at the Sainsbury Lab to continue work on 
+                  division of labour in bacterial biofilms.
+                </p>
+                <h4>May 2015</h4>
+                <p>
+                  Our paper
+                  "Synthesizing and tuning chemical reaction networks with specified behaviours" 
+                  has been accepted by the DNA 2015 conference in Harvard.
+                  <a href="https://arxiv.org/abs/1508.04403">arXiv:1508.04403 [cs.ET]</a>
+                </p>
                 <h4>February 2014</h4>
                 <p>
                   Our paper
