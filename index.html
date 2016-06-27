@@ -161,14 +161,6 @@ function jqst(obj){
             <a href="papers/MR2012a.pdf">pdf</a> &nbsp; <font color="red">
             (Invited speaker)</font></p>
             
-            <p class="rev-conf">N. Murphy &amp; D. Woods. <em>"Uniformity conditions in natural computing"</em>, preproceedings of DNA16 2010.
-            <!--<a href="papers/DNA16.pdf">pdf</a>--> &nbsp; 
-            <!--<a style="color:red" href="http://nicosia.is.s.u-tokyo.ac.jp/dna/award.html">(Best student paper award)</a>-->
-              <a style="color:red" href="http://www.isnsce.org/awards/dna-student-awards">(Best student paper award)</a>
-              The work in this paper was greatly expanded and its latest incarnation appears as 
-                "AND and/or OR: Uniform polynomial-size circuits"</em>,
-            <a href="http://arxiv.org/abs/1212.3282">arXiv:1212.3282 [cs.CC]</a>.
-			</p>
 
             <!--<p class="tech">
             N. Murphy, D. Woods and T.J. Naughton, <em>"Stable Sorting Using Special-Purpose Physical Devices"</em>, BCRI Preprint 06/2006, May 2006, Boole Centre for Research in Informatics, University College Cork, Ireland.
@@ -183,7 +175,6 @@ function jqst(obj){
 			<a href="papers/MWN2005m.pdf">pdf</a> 
             </p>
 
-
             <p class="block"><strong>Computational complexity and membrane systems.</strong></p>
             <p class="tech">
             Niall Murphy and Damien Woods
@@ -197,27 +188,130 @@ function jqst(obj){
                  In Proceedings of the 10th Brainstorming Week on Membrane Computing, 2012.
                 <a href="papers/PMP2012.pdf">pdf</a>
             </p>
-            <p class="journal">N. Murphy &amp; D. Woods.
-            <em>"The computational power of membrane systems under tight uniformity conditions"</em>
-			<a href="papers/IntroUniformity.pdf">pdf</a> (Invited)
-            Natural Computing: Volume 10, Issue 1 (2011), Page 613. 
-            <a href="http://www.springerlink.com/content/m3361414614784kg/">Link</a>.
-            <!--<a href="agap-semi-uniform">code to generate the semi-uniform family solving AGAP (P-lingua)</a>-->
-            </p>
             <p class="unrev-conf">N. Murphy &amp; D. Woods. <em>"Uniformity: Uncovering the Frontier of Parallelism"</em>, Proceedings of the 10th Workshop on Membrane Computing, Curtea de Argeş, Romania. 2009. pages 556-560. <a href="papers/MW2009cc.pdf">pdf</a> 
 			</p>
             <p class="rev-conf">N. Murphy &amp; D. Woods. <em>"A characterisation of NL using membrane systems without charges and dissolution"</em>, Proceedings 7th International Conference on Unconventional Computing 2008, Vienna, Austria. Springer Lecture Notes in Computer Science, vol  5204 , pp 164-176
 			<a href="papers/MW2008c.pdf">pdf</a> 
             <a href="http://www.springerlink.com/content/35qg210662026701/">Link</a>
 			</p>
-            <p class="rev-conf">N. Murphy &amp; D. Woods. <em>"On acceptance conditions for membrane systems: characterisations of L and NL"</em>, The Complexity of Simple Programs, Cork, Ireland, 6-7 December, 2008. EPTCS volume 1 pages 172-184 <a href="http://arxiv.org/abs/0906.3327v1">arXiv:0906.3327v1 [cs.CC]</a>  (also appeared in Cork University Press, pp 225-242). 
-			<a href="papers/MW2008cb.pdf">pdf</a> 
-			</p>
             <!--<p>
             N. Murphy and D. Woods <em>A characterisation of NL using membrane systems without charges and dissolution</em>, NUIM Tech Report NUIM-CS-TR-2008-01, Jan 2008, Department of Computer Science, National University of Ireland Maynooth, Ireland.
 			<a href="papers/MW2008m.pdf">pdf</a>
             </p>-->
             <!--</div>-->
+      <p class="block" id="show_summary_uniform"><strong>Uniform families vs. Semi-uniform families.</strong></p>
+        <div class="blurb" id="summary_uniform">
+          <p>
+          When solving problems with biological computers, it sometimes seems more
+          intuitive to directly encode a problem instance into the computation machinery.
+          For example, many of the first DNA computers directly encoded problem instances 
+            into experimental protocols so that a 
+            unique protocol was required for each instance of the problem considered. 
+            This way of encoding a problem is known as <em>semi-uniformity</em> in contrast 
+            to the more general <em>uniformity</em> (e.g.\ Boolean circuits) where there is one device to solve all
+      problem instances of a certain size.
+      
+          Previously most researchers intuitively felt that while uniformity was more 
+        desirable than semi-uniformity the two concepts were computationally identical.
+        We show that for a simple class of circuits, uniform families are strictly weaker than 
+        semi-uniform ones. 
+
+      This result is applicable to any implementation of family style computing 
+      systems (e.g.\@ Boolean circuits, membrane systems, DNA strand displacement etc.). 
+      I have improved, expanded, and refined this work since the
+      original (best student paper award, DNA 16) conference paper~\cite{MW2010dna}. 
+      While preparing this work for a journal publication we greatly extended and 
+      improved on the original result~\cite{uniformityarxiv2012} this work
+      was presented at the ``Machines Computation and Universality''
+      conference 2013 at ETH Zurich.
+          Before my award winning research, the complexity community intuitively felt that:
+          while devices that accept many inputs (uniform) are more 
+          desirable than a ``one-shot'' hard coded device (semi-uniform),
+          the two concepts were computationally identical.
+          My research proved that for a simple example, this is not the
+          case~\cite{MW2014}!
+          This result resolved an open question in membrane computing and 
+          won the \emph{best student paper prize} at the DNA 16 conference~\cite{MW2010dna}. 
+          We improved, strengthened and refined the work to the point that  
+          we could make a contribution to mainstream complexity theory~\cite{MurphyWoods2013}.
+          The result is applicable to many biological methods of computing 
+          such as chemical reaction networks and DNA strand displacement.
+          </p>
+        </div>
+        <div class="main_paper" id="show_summary_uniform_memdiffuni">
+          <b>N. Murphy</b>, D. Woods  
+          <em>"Uniformity is weaker than semi-uniformity for some membrane systems"</em>
+          <a href="http://dx.doi.org/10.3233/FI-2014-1095">
+            Fundamenta Informaticae
+          </a>, 134(1-2):129-152. 2014.
+          Also see <a href="http://arxiv.org/abs/1412.3377">arXiv:1412.3377 [cs.CC]</a>. 
+        </div>
+        <div class="blurb" id="summary_uniform_memdiffuni">
+          <p>
+          here we apply the result to membrane systems.
+          </p>
+        </div>
+        <div class="superceeded_paper" id="show_summary_uniform_dnapaper">
+          <p class="rev-conf">N. Murphy &amp; D. Woods. <em>"Uniformity conditions in natural computing"</em>, preproceedings of DNA16 2010.
+          <!--<a href="papers/DNA16.pdf">pdf</a>--> &nbsp; 
+          <!--<a style="color:red" href="http://nicosia.is.s.u-tokyo.ac.jp/dna/award.html">(Best student paper award)</a>-->
+            <a style="color:red" href="http://www.isnsce.org/awards/dna-student-awards">(Best student paper award)</a>
+            <!--The work in this paper was greatly expanded and its latest incarnation appears as -->
+              <!--"AND and/or OR: Uniform polynomial-size circuits"</em>,-->
+          <!--<a href="http://arxiv.org/abs/1212.3282">arXiv:1212.3282 [cs.CC]</a>.-->
+			    </p>
+        </div>
+        <div class="blurb" id="summary_uniform_dnapaper">
+          <p>
+          here we apply the result to membrane systems.
+          </p>
+        </div>
+        <div class="main_paper" id="show_summary_uniform_tight">
+          <p>N. Murphy &amp; D. Woods.
+            <em>"The computational power of membrane systems under tight uniformity conditions"</em>
+            <a href="papers/IntroUniformity.pdf">pdf</a> (Invited)
+              Natural Computing: Volume 10, Issue 1 (2011), Page 613. 
+            <a href="http://www.springerlink.com/content/m3361414614784kg/">Link</a>.
+            <!--<a href="agap-semi-uniform">code to generate the semi-uniform family solving AGAP (P-lingua)</a>-->
+          </p>
+        </div>
+        <div class="blurb" id="summary_uniform_tight">
+          <p>
+          Here we explore the effects of tight Here we give the proof that semi-uniform membrane systems here we apply the result to membrane systems.
+          </p>
+        </div>
+        <div class="superceeded_paper" id="show_summary_semiuniform_L_NL">
+          <p> N. Murphy &amp; D. Woods.
+            <em>"On acceptance conditions for membrane systems: characterisations of L and NL"</em>,
+            The Complexity of Simple Programs, Cork, Ireland, 6-7 December, 2008.
+            Cork University Press, pages 225-242. 
+            EPTCS volume 1 pages 172-184 <a href="http://arxiv.org/abs/0906.3327v1">arXiv:0906.3327v1 [cs.CC]</a>
+            <a href="papers/MW2008cb.pdf">pdf</a> 
+          </p>
+        </div>
+        <div class="blurb" id="summary_semiuniform_L_NL">
+          <p>
+          Here we investigate how different interpretations of the definitions of membrane systems 
+          can result in a change in the computing power of the system.
+          This idea was revisited more throughly in "<em>Uniformity is weaker than semi-uniformity for some membrane systems</em>" above. 
+          </p>
+        </div>
+        <div class="superceeded_paper" id="show_summary_semiuniform_NL">
+          <p> N. Murphy &amp; D. Woods.
+            <em>"A characterisation of NL using membrane systems without charges and dissolution"</em>
+              Unconventional Computing 7, 2008. 
+              LNCS 5204, 164--176. 
+              <a href="papers/MW2008c.pdf">pdf</a>
+          </p>
+        </div>
+        <div class="blurb" id="summary_semiuniform_NL">
+          <p>
+          This paper is the first time tight uniformity conditions were applied to
+          membrane computing and highlighted that for active membrane systems without dissolution, 
+          the previous upper bound could be improved exponentially.  
+          This idea was revisited more throughly in "<em>The computational power of membrane systems under tight uniformity conditions</em>" above. 
+          </p>
+        </div>
 
       <p class="block" id="show_summary_Hasenjaeger"><strong>Hasenjaeger's universal machine.</strong></p>
         <div class="blurb" id="summary_Hasenjaeger">
@@ -466,8 +560,7 @@ function jqst(obj){
                   "Wang's B machines are efficiently universal, as is Hasenjaeger's small universal electromechanical toy"
                   has been accepted for publication in the 
                   <a href="http://dx.doi.org/10.1016/j.jco.2014.02.003">
-                    Journal of Complexity
-                  </a>.
+                    Journal of Complexity</a>.
                 </p>
 
                 <h4>November 2013</h4>
